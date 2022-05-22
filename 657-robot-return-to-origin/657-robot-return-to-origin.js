@@ -28,8 +28,6 @@ var judgeCircle = function (moves) {
         }
     });
 
-    console.log(up, right);
-
     if (up == 0 && right == 0) {
         return true;
     } else {
