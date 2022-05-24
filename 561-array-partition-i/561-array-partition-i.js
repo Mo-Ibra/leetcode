@@ -2,15 +2,41 @@
  * @param {number[]} nums
  * @return {number}
  */
-var arrayPairSum = nums => {
-    nums.sort((a, b) => a - b);
-    let sum = 0;
 
-    for (let i = 0; i < nums.length; i++) {
-        if (i % 2 === 0) {
-            sum += nums[i];
-        }
+Array.prototype.chunk = function (size) {
+
+    let result = [];
+
+    while (this.length) {
+        result.push(this.splice(0, size));
     }
 
-    return sum
+    return result;
+}
+
+var arrayPairSum = function (nums) {
+        // sort number 
+        // get the small number of first two
+        // and small of second 
+        // and etc..
+        // return sum of all numbers;
+
+    let sortNums = nums.sort((a, b) => a - b);
+    let chunk = sortNums.chunk(2);
+
+    let arrayOfResult = [];
+    let result = 0;
+
+    console.log(chunk);
+
+    console.log(chunk.length);
+
+    for (let i = 0; i < chunk.length; i++) {
+        arrayOfResult.push(Math.min(...chunk[i]));
+        result += Math.min(...chunk[i]);
+    }
+
+    console.log(result);
+
+    return result;
 };
