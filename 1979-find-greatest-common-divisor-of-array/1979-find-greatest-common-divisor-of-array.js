@@ -14,21 +14,9 @@ var findGCD = function (nums) {
 
     if (greatOfNums % smallOFNums !== 0) {
         while (isFloat(greatOfNums / increment) || isFloat(smallOFNums / increment)) {
-            // if (isFloat(smallOFNums / increment)) {
-            //     increment--;
-            // } else {
-            //     increment--;
-            // }
             increment--;
-            console.log(increment);
         }
-        console.log(increment);
-        console.log('solved');
-
         return increment;
     };
-
-    console.log('Can divid');
-
     return smallOFNums;
 };
