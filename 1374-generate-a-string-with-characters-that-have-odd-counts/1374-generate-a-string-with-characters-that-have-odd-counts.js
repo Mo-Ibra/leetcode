@@ -37,7 +37,5 @@ var generateTheString = function (n) {
         }
     }
     
-    console.log(result);
-
     return result;
 }
