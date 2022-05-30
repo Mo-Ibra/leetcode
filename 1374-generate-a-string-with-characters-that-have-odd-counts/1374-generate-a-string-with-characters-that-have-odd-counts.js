@@ -15,14 +15,9 @@ var generateTheString = function (n) {
         countDeplicatedNumbers = (countDeplicatedNumbers || 0) + 1;
     });
 
-    console.log(randomCharacters);
-    console.log(countDeplicatedNumbers);
-
     if (countDeplicatedNumbers % 2 == 0 ) {
         randomCharacters[0] = 'b';
     }
-    
-    console.log(randomCharacters.join(''));
 
     return randomCharacters.join('');
 }
