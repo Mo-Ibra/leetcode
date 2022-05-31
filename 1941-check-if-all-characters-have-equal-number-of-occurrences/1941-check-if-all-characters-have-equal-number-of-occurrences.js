@@ -11,8 +11,6 @@ var areOccurrencesEqual = function (x) {
         numberOfCharacters[u] = (numberOfCharacters[u] || 0) + 1;
     });
 
-    console.log(numberOfCharacters);
-
     const values = Object.values(numberOfCharacters);
 
     var unique = values.filter((value, index, self) => {
@@ -20,10 +18,8 @@ var areOccurrencesEqual = function (x) {
     });
 
     if (unique.length === 1) {
-        console.log('true')
         return true;
     } else {
-        console.log('false');
         return false;
     }
 }
