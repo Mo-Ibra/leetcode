@@ -15,9 +15,6 @@ var sumOfUnique = function(nums) {
         }
     });
 
-    console.log(myArray);
-    console.log(deplicatedNumbers);
-
     let result = myArray.filter(num => {
         if (!deplicatedNumbers.includes(num)) {
             return num
@@ -29,8 +26,6 @@ var sumOfUnique = function(nums) {
     result.forEach(number => {
         resultOfSum += number;
     });
-
-    console.log(resultOfSum);
 
     return resultOfSum;
 };
