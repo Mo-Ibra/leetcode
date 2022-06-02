@@ -14,8 +14,6 @@ var countNegatives = function (grid) {
         });
     });
 
-    console.log(result);
-
     return result;
 
 };
