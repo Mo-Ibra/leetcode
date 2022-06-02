@@ -13,10 +13,6 @@ var countNegatives = function (grid) {
                     result += 1;
                 }
             });
-        } else {
-            if (n.toString().startsWith('-')) {
-                result += 1;
-            }
         }
     });
 
