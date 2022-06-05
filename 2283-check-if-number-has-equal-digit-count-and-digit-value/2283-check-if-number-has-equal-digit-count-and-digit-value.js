@@ -9,7 +9,6 @@ function getOccurrence(array, value) {
 }
 
 var digitCount = function (num) {
-    console.log(num);
 
     let arrayOfNumbers = [];
     let arrayOfAppears = num.split('');
@@ -20,21 +19,11 @@ var digitCount = function (num) {
 
     let indexOfArray = arrayOfNumbers.length;
 
-    console.log(arrayOfNumbers);
-    console.log(arrayOfAppears);
-    // console.log(indexOfArray);
-
     let result = [];
 
     for (let i = 0; i < indexOfArray; i++) {
-        console.log(getOccurrence(arrayOfAppears, arrayOfNumbers[i]));
         result.push(getOccurrence(arrayOfAppears, arrayOfNumbers[i]).toString());
     };
-
-
-    console.log(result);
-
-    console.log(arrayOfAppears);
 
 	// Check if the arrays are the same length
 	if (result.length !== arrayOfAppears.length) return false;
@@ -44,6 +33,6 @@ var digitCount = function (num) {
 		if (result[i] !== arrayOfAppears[i]) return false;
 	}
 
-	// Otherwise, console.log(true)
+	// Otherwise, return true;
 	return true;
 };
