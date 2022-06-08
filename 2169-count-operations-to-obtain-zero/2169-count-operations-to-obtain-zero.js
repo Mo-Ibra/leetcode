@@ -23,7 +23,5 @@ var countOperations = function (num1, num2) {
         };
     }
 
-    console.log(result);
-
     return result;
 };
