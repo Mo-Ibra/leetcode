@@ -12,9 +12,10 @@ var largestGoodInteger = function (num) {
         }
     };
 
+    let maxNumber = Math.max(...result).toString()
+
     if (result.length > 0) {
-        console.log(Math.max(...result).toString() + Math.max(...result).toString() + Math.max(...result).toString());
-        return Math.max(...result).toString() + Math.max(...result).toString() + Math.max(...result).toString();
+        return maxNumber + maxNumber + maxNumber;
     } else {
         return ""
     };
