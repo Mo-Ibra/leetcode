@@ -1,10 +1,4 @@
-/**
- * @param {string} firstWord
- * @param {string} secondWord
- * @param {string} targetWord
- * @return {boolean}
- */
-var isSumEqual = function (firstWord, secondWord, targetWord) {
+var getIndexex = function(arr) {
     let englishCharacters = {
         'a': 0,
         'b': 1,
@@ -34,40 +28,29 @@ var isSumEqual = function (firstWord, secondWord, targetWord) {
         'z': 25
     };
 
-    let firstArray = firstWord.split('');
+    let result = [];
 
-    let firstArrayResult = [];
-
-    let secondArray = secondWord.split('');
-
-    let secondArrayResult = [];
-
-    let targetArray = targetWord.split('');
-
-    let targetArrayResult = [];
-
-    for (let i = 0; i < firstArray.length; i++) {
-        console.log(englishCharacters[firstArray[i]]);
-        firstArrayResult.push(englishCharacters[firstArray[i]]);
+    for (let i = 0; i < arr.length; i++) {
+        result.push(englishCharacters[arr[i]]);
     }
+    
+    return result;
+}
 
-    for (let i = 0; i < secondArray.length; i++) {
-        console.log(englishCharacters[secondArray[i]]);
-        secondArrayResult.push(englishCharacters[secondArray[i]]);
-    }
+/**
+ * @param {string} firstWord
+ * @param {string} secondWord
+ * @param {string} targetWord
+ * @return {boolean}
+ */
+var isSumEqual = function (firstWord, secondWord, targetWord) {
 
-    for (let i = 0; i < targetArray.length; i++) {
-        console.log(englishCharacters[targetArray[i]]);
-        targetArrayResult.push(englishCharacters[targetArray[i]]);
-    }
+    var firstNumber = Number(getIndexex(firstWord.split('')).join(''));
+    var secondNumber = Number(getIndexex(secondWord.split('')).join(''));
+    var targetNumber = Number(getIndexex(targetWord.split('')).join(''));
 
-    let firstNumber = Number(firstArrayResult.join(''));
-    let secondNumber = Number(secondArrayResult.join(''));
-    let targetNumber = Number(targetArrayResult.join(''));
+    if (firstNumber + secondNumber === targetNumber) return true;
+    
+    return false;
 
-    if (firstNumber + secondNumber === targetNumber) {
-        return true;
-    } else {
-        return false;
-    }
 };
