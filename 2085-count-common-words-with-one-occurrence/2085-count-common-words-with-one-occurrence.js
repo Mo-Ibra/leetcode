@@ -27,7 +27,6 @@ var countWords = function (words1, words2) {
         }
     });
 
-    console.log(result);
     return result;
 
 };
