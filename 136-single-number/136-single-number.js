@@ -8,10 +8,7 @@ var singleNumber = function (nums) {
 
     for (let i = 0; i < nums.length; i += 2 ) {
 
-        // console.log(nums[i], nums[i + 1]);
-
         if (nums[i] != nums[i + 1]) {
-            // console.log(nums[i]);
             return nums[i]
         }
 
