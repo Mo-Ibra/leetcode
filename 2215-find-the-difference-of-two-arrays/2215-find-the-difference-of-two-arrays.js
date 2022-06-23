@@ -20,7 +20,5 @@ var findDifference = function (nums1, nums2) {
         }
     });
 
-    let firstSet = [];
-    let secondSet = [];
     return [[...new Set(firstArray)], [...new Set(secondArray)]];
 };
