@@ -20,9 +20,7 @@ var findDifference = function (nums1, nums2) {
         }
     });
 
-    let firstSet = [...new Set(firstArray)];
-    let secondSet = [...new Set(secondArray)];
-
-    console.log([firstSet, secondSet]);
-    return [firstSet, secondSet];
+    let firstSet = [];
+    let secondSet = [];
+    return [[...new Set(firstArray)], [...new Set(secondArray)]];
 };
