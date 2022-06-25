@@ -15,9 +15,6 @@ var sortArrayByParityII = function (nums) {
         }
     });
 
-    console.log(evenNumbers);
-    console.log(oddNumbers);
-
     let result = [];
 
     evenNumbers.forEach((num1, index) => {
@@ -25,8 +22,6 @@ var sortArrayByParityII = function (nums) {
         result.push(num1);
         result.push(num2);
     });
-
-    console.log(result);
 
     return result;
 };
