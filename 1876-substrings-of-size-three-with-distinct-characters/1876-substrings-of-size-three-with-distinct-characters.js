@@ -28,8 +28,5 @@ var countGoodSubstrings = function (s) {
         }
     });
 
-    console.log(result);
-    console.log(result.length);
-
     return result.length;
 };
