@@ -3,16 +3,10 @@
  * @return {boolean}
  */
 var containsDuplicate = function (nums) {
-    let myArray = [];
+    let myArray = nums.length;
+    let mySet = new Set([...nums]).size;
 
-    for (let i = 0; i < nums.length; i++) {
-        if (myArray.indexOf(nums[i]) === -1) {
-            myArray.push(nums[i]);
-        } else {
-            return true;
-        }
-    };
-    
+    if (myArray !== mySet) return true;
     return false;
 
 };
