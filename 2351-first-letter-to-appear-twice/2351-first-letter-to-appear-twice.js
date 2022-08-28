@@ -15,15 +15,12 @@ var repeatedCharacter = function(s) {
     for (let i = 0; i < myArray.length; i++) {
         if (myArray[i] === myArray[i + 1]) {
             result.push(myArray[i]);
-            // return myArray[i];
         }
     }
 
     if (duplicateValues)  {
-        console.log(duplicateValues[0])
         return duplicateValues[0]
     }
 
-    console.log(result[0])
     return result[0];
 };
